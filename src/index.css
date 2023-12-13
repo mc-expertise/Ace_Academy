@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* start Style radio btn */
+.custom-radio-btn {
+  --size: 25px;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: var(--size);
+  flex-direction: column;
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+.custom-radio-btn.left {
+  padding-left: 0;
+  padding-right: var(--size);
+}
+
+/* label  */
+.custom-radio-btn .label {
+  margin-left: 5px;
+}
+
+.custom-radio-btn.left .label {
+  margin: 0 5px;
+}
+
+.custom-radio-btn[aria-label]::after {
+  content: attr(aria-label);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* checkmark */
+.custom-radio-btn .checkmark {
+  --gap: 2px;
+  --border: 1px;
+  --check-color: #ff5722;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  border: var(--border) solid #f09272;
+  padding: var(--gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-radio-btn.left .checkmark {
+  left: auto;
+  right: 0;
+}
+
+.custom-radio-btn input:checked ~ .checkmark {
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at center,
+    var(--check-color)
+      calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
+    rgba(255, 255, 255, 0) 0
+  );
+}
+
+/* End style radio btn */
+
+/* Start select box */
+.select-menu {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.select {
+  background-color: #f5f5f5;
+  padding: 20px;
+  padding-left: 60px;
+  color: #bcbfc3;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.options-list {
+  position: absolute;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-top: 14px;
+  padding: 10px 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: auto;
+  z-index: 100;
+}
+
+.option {
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.option:hover,
+.option.selected {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: #eee;
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+}
+
+.options-list.active {
+  height: 185px;
+}
+/* End select box*/
+
+/* Start PopUps */
+.backgroundImage {
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  background: url(./assets/backgroundPopsss.png),
+    lightgray 50% / cover no-repeat;
+  filter: blur(12px);
+}
+
+.PopUpsStyles {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.03);
+  width: 523px;
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styleBtnPrimary {
+  color: white;
+  display: flex;
+  height: 60px;
+  padding: 20px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f09272;
+  font-size: 18px;
+  font-weight: 600;
+}
+.styleBtnSecon {
+  display: flex;
+  height: 60px;
+  padding: 20px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 0.8px solid #000;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* End PopUps */
+
+/* Start DropDown */
+.menus {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-items {
+  position: relative;
+  font-size: 14px;
+  transition: all 1s;
+}
+
+.menu-items a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-items button {
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-items a,
+.menu-items button {
+  text-align: left;
+  padding: 0.7rem 1rem;
+}
+
+.menu-items a:hover,
+.menu-items button:hover {
+  background-color: #ececec !important;
+  border-radius: 0 !important;
+}
+.customLabelSwitch {
+  margin-bottom: 0 !important;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  background: #000;
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 10rem;
+  /* padding: 0.5rem 0; */
+  /* margin-top: 10px; */
+  list-style: none;
+  background-color: #fff;
+  display: none;
+  width: 257px;
+  border-radius: 13px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.07);
+  z-index: 100;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown.dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.07);
+}
+/* End DropDown */
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  color: #8c8c8c !important;
+  background: white;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50%;
+  position: absolute !important;
+} */
+
+/* .swiper-button-next {
+  right: -10px;
+  z-index: 100;
+} */
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 8px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #525966 !important;
+  width: 15px !important;
+  height: 6px;
+  border-radius: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.ShadowwAiSection {
+  background: linear-gradient(
+    90deg,
+    #d9d9d9 14.51%,
+    rgba(217, 217, 217, 0) 56.18%
+  );
+}
+
+.imglogspace {
+  border-radius: 20px;
+  background: lightgray url(/src/assets/logphoto.jpeg) center / cover no-repeat;
+  box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.03);
+}
+.ShadowImgLog {
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 48.43%,
+    #f5f5f5 100%
+  );
+  box-shadow: 0px 4px 50px 10px rgba(0, 0, 0, 0.03);
+}
+
+.primary-button {
+  @apply bg-[#F09272] font-semibold text-[18px] text-white px-[26px] py-[20px] cursor-pointer rounded-[10px] w-[344px];
+}
+.icon-Input {
+  @apply absolute w-[60px] h-full left-0 top-0 flex items-center justify-center;
+}
+
+.primary-input {
+  @apply bg-[#F5F5F5] p-[18px] pl-[60px] w-[344px] rounded-[10px] focus:outline-[#F09272];
+}
+.main-title {
+  @apply text-[#1F1F1F] text-3xl font-extrabold p-2;
+}
+
+.main-paragraph {
+  @apply text-[#1F1F1F] text-base p-2;
+}
+
+.main-label {
+  @apply font-extrabold text-[16px] mb-[10px] block;
+}
+.ShadowHeader {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.TitleAisection {
+  font-family: 'Brawler', serif;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.styleDropdownProfil {
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+}
+
+#root {
+  height: 100dvh;
+  font-family: 'Manrope', sans-serif;
+}
+body {
+  height: 100dvh;
+}
+
+.heightlogphoto {
+  height: 858px;
+}
+@media (max-height: 856px) {
+  .heightlogphoto {
+    height: 738px;
+  }
+}
