@@ -8,7 +8,7 @@ const CreatePassword = () => {
         <div className="backgroundImage"></div>
 
         <div className="PopUpsStyles">
-          <div className="w-[328px] flex items-center mt-16 my-16 justify-between gap-2">
+          <div className="w-[328px] flex items-center  my-16 justify-between gap-2">
             <div className="h-[5px] w-full bg-[#F09272] rounded-full"></div>
             <div className="h-[5px] w-full bg-[#F09272] rounded-full"></div>
             <div className="h-[5px] w-full bg-[#F5F5F5] rounded-full"></div>

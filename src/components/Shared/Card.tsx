@@ -10,7 +10,7 @@ import 'swiper/css/free-mode';
 const Card = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between relative">
         <Swiper
           breakpoints={{
             340: {

@@ -271,7 +271,7 @@
 }
 /* End DropDown */
 
-/* .swiper-button-next,
+.swiper-button-next,
 .swiper-button-prev {
   color: #8c8c8c !important;
   background: white;
@@ -279,22 +279,25 @@
   height: 36px !important;
   border-radius: 50%;
   position: absolute !important;
-} */
+}
 
-/* .swiper-button-next {
-  right: -10px;
+.swiper-button-next {
+  right: -45px;
   z-index: 100;
-} */
+}
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 8px;
 }
-
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
-  opacity: 1;
+.swiper-slide {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
+
+/* .swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+} */
 
 .swiper-pagination-bullet-active {
   background-color: #525966 !important;
@@ -376,8 +379,80 @@ body {
 .heightlogphoto {
   height: 858px;
 }
+.padding_popups {
+  padding: 4rem;
+}
+
 @media (max-height: 856px) {
   .heightlogphoto {
     height: 738px;
   }
+  .padding_popups {
+    padding: 2rem;
+  }
+}
+
+div#demo-multiple-checkbox {
+  font-size: 14px;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 11.2px 16px !important;
+  line-height: inherit;
+  border-radius: 0.75rem !important;
+}
+
+label#demo-multiple-checkbox-label {
+  line-height: normal;
+  color: #525966;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.MuiFormControl-root.css-2m9kme-MuiFormControl-root {
+  width: 180px;
+}
+
+.css-10hburv-MuiTypography-root {
+  font-size: 14px !important;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  font-size: 16px;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  display: none;
+}
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.MuiSelect-iconOpen.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+  display: none;
+}
+
+.MuiSelect-root .MuiSelect-icon.MuiSelect-iconOutlined {
+  display: none !important;
+}
+
+/* Hide the default arrow icon in the dropdown menu */
+.MuiSelect-menu .MuiSvgIcon-root {
+  display: none !important;
+}
+
+.css-187mznn-MuiSlider-root {
+  color: #f09272 !important;
+}
+
+span.MuiSlider-valueLabelOpen.MuiSlider-valueLabel.css-nnid7-MuiSlider-valueLabel {
+  background: #f09272 !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  line-height: 14px !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #f09272 !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: rgba(240, 144, 112, 0.19) !important;
 }

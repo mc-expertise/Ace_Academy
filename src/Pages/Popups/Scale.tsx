@@ -8,7 +8,7 @@ const Scale = () => {
         <div className="backgroundImage"></div>
 
         <div className="PopUpsStyles">
-          <div className="w-[328px] flex items-center mt-16 my-16 justify-between gap-2">
+          <div className="w-[328px] flex items-center padding_popups justify-between gap-2">
             <div className="h-[5px] w-full bg-[#F09272] rounded-full"></div>
             <div className="h-[5px] w-full bg-[#F09272] rounded-full"></div>
             <div className="h-[5px] w-full bg-[#F09272] rounded-full"></div>
@@ -102,8 +102,10 @@ const Scale = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[328px] items-center gap-2 my-16 justify-center">
-            <Link to={'/aboutyourself'} className="styleBtnSecon">
+          <div className="flex w-[328px] items-center gap-2 padding_popups justify-center">
+            <Link
+              to={'/aboutyourself'}
+              className="styleBtnSecon whitespace-nowrap">
               Go back
             </Link>
             <Link to={'/successfully'} className="styleBtnPrimary">

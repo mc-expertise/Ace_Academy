@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DropProfil = () => {
   return (
@@ -33,7 +34,9 @@ const DropProfil = () => {
           </svg>
           <p>Enlish</p>
         </div>
-        <p className="cursor-pointer">Logout</p>
+        <Link to={'/signin'} className="cursor-pointer">
+          Logout
+        </Link>
       </div>
     </>
   );
