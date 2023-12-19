@@ -12,9 +12,11 @@ const DropProfil = () => {
             <p className="text-[#525966]">Koppert</p>
           </div>
         </div>
-        <button className="primary-button !text-[16px] !h-[42px] !w-full flex justify-center items-center">
+        <Link
+          to={'/requests'}
+          className="primary-button !text-[16px] !h-[42px] !w-full flex justify-center items-center">
           Switch to admin
-        </button>
+        </Link>
         <ul className="border-[#D9D9D9] border-y-2 py-[12px] flex flex-col gap-[12px]">
           <li className="cursor-pointer">My Profile</li>
           <li className="cursor-pointer">Refer a friend</li>

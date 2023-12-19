@@ -7,7 +7,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Check if the click is outside the block
       if (
         blockRef.current &&
         !blockRef.current.contains(event.target as Node)
@@ -16,10 +15,8 @@ const Header = () => {
       }
     };
 
-    // Attach the event listener when the component mounts
     document.addEventListener('click', handleClickOutside);
 
-    // Detach the event listener when the component unmounts
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
