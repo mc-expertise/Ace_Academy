@@ -101,6 +101,7 @@ export default function RequestsTable() {
 
     return filteredItems.slice(start, end);
   }, [page, filteredItems, rowsPerPage]);
+  console.log('filteredUsers', filteredItems);
 
   const sortByDate = (items: User[], order: string) => {
     return items.sort((a, b) => {
@@ -121,10 +122,18 @@ export default function RequestsTable() {
   };
 
   const sortedItems = React.useMemo(() => {
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
     if (sortDescriptor.column === 'date' && sortDescriptor.direction) {
-      return sortByDate([...items], sortDescriptor.direction);
+      return sortByDate([...filteredItems], sortDescriptor.direction).slice(
+        start,
+        end
+      );
     } else if (sortDescriptor.column === 'price' && sortDescriptor.direction) {
-      return sortByPrice([...items], sortDescriptor.direction);
+      return sortByPrice([...filteredItems], sortDescriptor.direction).slice(
+        start,
+        end
+      );
     }
   }, [sortDescriptor, items]);
 
@@ -134,9 +143,9 @@ export default function RequestsTable() {
       Feb: 2,
       Mar: 3,
       Apr: 4,
-      Mai: 5,
-      Jun: 6,
-      Jul: 7,
+      May: 5,
+      June: 6,
+      July: 7,
       Aug: 8,
       Sep: 9,
       Oct: 10,
@@ -279,8 +288,6 @@ export default function RequestsTable() {
     users.length,
     hasSearchFilter,
   ]);
-
-  console.log('selectedKeys', selectedKeys);
 
   const bottomContent = React.useMemo(() => {
     return (
